@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap");
+
+/* 400,700 */
+
+:root {
+  --primary1: hsl(179, 62%, 43%); /* Cyan */
+  --primary2: hsl(71, 73%, 54%); /* Bright Yellow */
+  --neutral1: hsl(204, 43%, 93%); /* Light Gray  */
+  --neutral2: hsl(218, 22%, 67%); /* Grayish Blue */
+}
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+body {
+  
+  font-family: "Karla", sans-serif;
+  background-color: var(--neutral1);
+  overflow-x: hidden;
+}
+
+.grid-box {
+  max-width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem auto;
+  border-radius: 15px;
+  box-shadow: 2px 12px 16px rgba(0, 0, 0, 0.6);
+}
+
+.cell1 {
+  background-color: #fff;
+  grid-area: 1 / 1 / 3 / 3;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.cell2 {
+  background-color: var(--primary1);
+  border-bottom-left-radius: 15px;
+}
+.cell3 {
+  background-color: hsl(179, 62%, 48%);
+  border-bottom-right-radius: 15px;
+}
+
+/*** Common styling  */
+.community,
+.subscription,
+.whyUs {
+  padding: 2rem;
+  margin: auto;
+}
+
+/***Community  cell */
+.community .title {
+  color: var(--primary1);
+  font-weight: 700;
+}
+
+.community .subtitle {
+  color: var(--primary2);
+}
+
+.community .info {
+  color: var(--neutral2);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/*** Subscription  cell */
+.subscription .subscribe-title,
+.subscription .subscription-value,
+.subscription .day-subscribe {
+  color: var(--neutral1);
+}
+.subscription .subscribe-title {
+  font-size: 1.2em;
+}
+.subscription .subscription-value {
+  display: inline-block;
+  margin-top: 1.4rem;
+}
+.subscription .subscription-value span:first-child {
+  font-weight: 700;
+  font-size: 1.6em;
+  margin-right: 0.4rem;
+}
+
+.day-subscribe {
+  margin-top: 0.6rem;
+}
+.signUp-btn {
+  background-color: var(--primary2);
+  color: var(--neutral1);
+  width: 16rem;
+  padding: 1rem;
+  margin-top: 1.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.subscribe-title,
+.subscription-value,
+.day-subscribe,
+.signUp-btn {
+  margin-left: 1.77rem;
+}
+
+/*** Why us  cell */
+.whyUs .whyus-title,
+.whyUs .text {
+  color: var(--neutral1);
+  margin-left: 1.55rem;
+}
+.whyUs .text {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/***Media Queries  */
+@media screen and (max-width: 600px) {
+  .signUp-btn {
+    width: 12rem;
+    margin: 1rem;
+  }
+  .subscribe-title,
+  .subscription-value,
+  .day-subscribe {
+    margin-left: 1rem;
+  }
+  
+}
+@media screen and (max-width: 1180px) {
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+  .cell1 {
+    grid-area: auto;
+  }
+  .cell2 {
+    border-radius: 0;
+  }
+  .cell3 {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+}
