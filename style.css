@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap");
 
-/* 400,700 */
-
 :root {
   --primary1: hsl(179, 62%, 43%); /* Cyan */
   --primary2: hsl(71, 73%, 54%); /* Bright Yellow */
