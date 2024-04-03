@@ -14,10 +14,10 @@ body {
   min-height: 100vh;
 }
 body {
-  
   font-family: "Karla", sans-serif;
   background-color: var(--neutral1);
   overflow-x: hidden;
+ 
 }
 
 .grid-box {
@@ -48,7 +48,7 @@ body {
 .community,
 .subscription,
 .whyUs {
-  padding: 2rem;
+  padding: 1rem;
   margin: auto;
 }
 
@@ -126,7 +126,7 @@ body {
 /***Media Queries  */
 @media screen and (max-width: 600px) {
   .signUp-btn {
-    width: 12rem;
+    width: 10rem;
     margin: 1rem;
   }
   .subscribe-title,
